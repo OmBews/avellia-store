@@ -59,8 +59,14 @@ th, td {
     background: var(--bs-color-dark-green) !important;
 }
 
+/* navbar  */
+
 .input-group {
     background: var(--bs-color-primary);
+}
+
+.dropdown-menu.lg {
+    border-color: #484848;
 }
 
 .dropdown-menu-end {
@@ -77,8 +83,26 @@ th, td {
 }
 
 .dropdown-menu {
-    min-width: 16rem !important;
+    min-width: 17rem !important;
+    background: var(--bs-color-soft-dark-primary);
+    position: absolute !important;
+    width: 100%;
 }
+
+.dropdown-menu li .dropdown-item:hover {
+    background: #353b42;
+    color: var(--bs-color-white-dark-primary);
+}
+
+.dropdown .dropdown-menu {
+    display: none;
+}
+
+.dropdown:hover > .dropdown-menu {
+    display: block; 
+}
+
+/* end navbar  */
 
 
 /* banner section  */
@@ -90,19 +114,58 @@ th, td {
 .swiper {
     width: 100%;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 35px;
   }
 
 .swiper-slide {
     background-position: center;
     background-size: cover;
-    width: 1000px;
-    height: 100%;
+    width: 85%;
+    /* height: 100%; */
 }
 
 .swiper-slide img {
     display: block;
     width: 100%;
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+    /* background-color: #fe6c1783; */
+    background-color: var(--bs-color-primary);
+    right: 10px;
+    padding: 30px;
+    color: rgb(255, 255, 255) !important;
+    fill: black !important;
+    stroke: black !important;
+    border-radius: 100px
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    /* background-color: #fe6c1783; */
+    background-color: var(--bs-color-primary) !important;
+    right: 10px;
+    padding: 13px;
+    color: rgb(255, 255, 255) !important;
+    fill: black !important;
+    stroke: black !important;
+    border-radius: 100px
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 20px !important;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: var(--bs-color-primary);
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--bs-color-primary);
+}
+
 
 /* end banner  */

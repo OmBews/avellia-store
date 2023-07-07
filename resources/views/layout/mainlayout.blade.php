@@ -42,7 +42,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                    <ul class="navbar-nav w-100">
+                    <ul class="navbar-nav w-100 mb-lg-0 mb-3">
                         <li class="nav-item w-100 mx-lg-3 mx-0">
                             <form class="d-flex input-group rounded-1 w-100" action="/search" method="get" role="search">
                                 <button class="input-group-text bg-transparent border-0 " id="basic-addon2"><i class="bi bi-search text-white"></i></button>
@@ -52,30 +52,74 @@
                     </ul>
                     
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item my-auto mx-3">
+                        <li class="nav-item my-lg-auto my-1 mx-3">
                             <a class="text-decoration-none fs-sm color-dark-primary" href="/">Home</a>
                         </li>
-                        <li class="nav-item my-auto mx-3">
-                            <a class="text-decoration-none fs-sm color-dark-primary" href="/">History</a>
+                        <li class="nav-item my-lg-auto my-1 mx-3">
+                            <a class="text-decoration-none fs-sm color-dark-primary" href="/history">History</a>
                         </li>
-                        <li class="nav-item my-auto mx-3">
-                            <a class="text-decoration-none fs-sm color-dark-primary d-flex" href="/">Calculator  <div class="ms-2 shrink">
-                            <i class="bi bi-chevron-down"></i>
-                        </div></a>
-                        </li>
-                        {{-- <li class="nav-item dropdown">
-                            <a style="white-space: nowrap" class="nav-link nav-hover fs-sm" href="/anime" role="button" data-bs-toggle="dropdown"  >
-                                <div class="d-flex align-items-center">anime</div>
+                        <li class="nav-item dropdown my-lg-auto my-1 mx-3 d-lg-block d-none">
+                            <a class="nav-link nav-hover fs-sm" href="/anime" role="button" data-bs-toggle="dropdown"  >
+                                <div class="d-flex align-items-center">Lainnya <i class="bi bi-chevron-down fs-s-sm ms-2"></i></div>
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-end border-0 shadow-sm position-absolute w-100">
-                                <li><a class="dropdown-item fs-sm" href="/my-profile"><i class="bi bi-person-fill me-2"></i> My Profile</a></li>
-                                <li><a class="dropdown-item fs-sm" href="/bookmark/list"><i class="bi bi-bookmark me-2"></i> Bookmark </a></li>
-                                <li>
-                                    <hr class="my-2">
-                                </li>
-                                <li><a class="dropdown-item fs-sm" href="/logout"><i class="bi bi-box-arrow-right me-2"></i> Log Out</a></li>
+                            <ul class="dropdown-menu lg dropdown-menu-end shadow-sm position-absolute rounded-1 py-2">
+                                <li><a class="dropdown-item py-3 fs-sm" href="/tournament">
+                                    <div class="row align-items-center">
+                                        <div class="col-2 text-center">
+                                            <i class="bi bi-geo me-2"></i>
+                                        </div>
+                                        <div class="col-8 ">
+                                            <p class="fs-sm mb-0 fw-bold">Tournament</p>
+                                            <p class="fs-s-sm mb-0">Buat Daftar Nama Tournament</p>
+                                        </div>
+                                    </div>
+                                </a></li>
+                                <li><a class="dropdown-item py-3 fs-sm" href="/hitung/winrate">
+                                    <div class="row align-items-center">
+                                        <div class="col-2 text-center">
+                                            <i class="bi bi-calculator me-2"></i>
+                                        </div>
+                                        <div class="col-8 ">
+                                            <p class="fs-sm mb-0 fw-bold">Hitung WinRate</p>
+                                            <p class="fs-s-sm mb-0">Hitung WR Hero dan Match</p>
+                                        </div>
+                                    </div>
+                                </a></li>
+                                <li><a class="dropdown-item py-3 fs-sm" href="/hitung/magic-wheel">
+                                    <div class="row align-items-center">
+                                        <div class="col-2 text-center">
+                                            <i class="bi bi-star-half me-2"></i>
+                                        </div>
+                                        <div class="col-8 ">
+                                            <p class="fs-sm mb-0 fw-bold">Hitung Magic Wheel</p>
+                                            <p class="fs-s-sm mb-0">Hitung Point Magic Wheel</p>
+                                        </div>
+                                    </div>
+                                </a></li>
+                                <li><a class="dropdown-item py-3 fs-sm" href="/hitung/zodiac">
+                                    <div class="row align-items-center">
+                                        <div class="col-2 text-center">
+                                            <i class="bi bi-stars me-2"></i>
+                                        </div>
+                                        <div class="col-8 ">
+                                            <p class="fs-sm mb-0 fw-bold">Hitung Zodiac</p>
+                                            <p class="fs-s-sm mb-0">Hitung Point Zodiac</p>
+                                        </div>
+                                    </div>
+                                </a></li>
                             </ul>
-                        </li> --}}
+                        </li>
+                        <li class="nav-item dropdown mx-3 my-auto d-lg-none d-block">
+                            <a class="nav-link nav-hover fs-sm" href="/anime" role="button" data-bs-toggle="dropdown"  >
+                                <div class="d-flex align-items-center">Lainnya <i class="bi bi-chevron-down fs-s-sm ms-2"></i></div>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end border-0 shadow-sm position-absolute w-100 rounded-1">
+                                <li><a class="dropdown-item fs-sm" href="/tournament"><i class="bi bi-geo me-2"></i>Tournament</a></li>
+                                <li><a class="dropdown-item fs-sm" href="/hitung/winrate"><i class="bi bi-calculator me-2"></i>Hitung WinRate</a></li>
+                                <li><a class="dropdown-item fs-sm" href="/hitung/magic-wheel"><i class="bi bi-star-half me-2"></i>Hitung Magic Wheel</a></li>
+                                <li><a class="dropdown-item fs-sm" href="/hitung/zodiac"><i class="bi bi-stars me-2"></i>Hitung Zodiac</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
