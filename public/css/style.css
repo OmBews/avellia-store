@@ -25,6 +25,14 @@ body {
     background-color: rgba(var(--bs-color-dark-primary),1)!important;
 }
 
+.bg-soft-dark{
+    background: var(--bs-color-soft-dark-primary);
+}
+
+.text-primary {
+    color: var(--bs-color-primary) !important;
+}
+
 .fs-s-sm {
     font-size: 12px !important;
 }
@@ -36,6 +44,10 @@ body {
 .form-control:focus, .form-select:focus, .navbar-toggler:focus, .form-check-input:focus {
     box-shadow: none;
     border-color: #dee2e6;
+}
+
+.form-control.auth:focus {
+    background: var(--bs-color-soft-dark-primary);
 }
 
 .max-content {
@@ -56,7 +68,7 @@ th, td {
 }
 
 .btn.btn-primary:active{
-    background: var(--bs-color-dark-green) !important;
+    background: var(--bs-color-primary) !important;
 }
 
 /* navbar  */

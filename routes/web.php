@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +18,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+
+// authentication
+Route::get('/login', [AuthController::class, 'loginView']);
+Route::get('/login/store', [AuthController::class, 'login'])->name('login.get');
+Route::get('/logout', [AuthController::class, 'logout']);
+
+// admin 
+Route::get('/app', [AdminController::class, 'index']);
+
