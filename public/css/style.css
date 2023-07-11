@@ -46,7 +46,7 @@ body {
     border-color: #dee2e6;
 }
 
-.form-control.auth:focus {
+.form-control.dark:focus {
     background: var(--bs-color-soft-dark-primary);
 }
 

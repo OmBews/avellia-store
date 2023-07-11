@@ -129,7 +129,7 @@
 
     @yield('content')
 
-    <hr class="my-0">
+    {{-- <hr class="my-0">
     <footer>
         
         <div class="container mt-5">
@@ -159,7 +159,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> --}}
 
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

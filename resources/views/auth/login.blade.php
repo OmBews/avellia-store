@@ -13,12 +13,12 @@
                             @csrf
                             <div class="mt-3">
                                 <label class="mb-1 opacity-75 fs-sm text-white">Username</label>
-                                <input autocomplete="off" type="text" name="username" required value="{{old('username')}}" class="form-control auth bg-soft-dark border-0 text-white fs-sm rounded-1">
+                                <input autocomplete="off" type="text" name="username" required value="{{old('username')}}" class="form-control dark bg-soft-dark border-0 text-white fs-sm rounded-1">
                                 @error('username')<p class="text-danger fs-sm mb-0">{{$message}}</p>@enderror
                             </div>
                             <div class="mt-3">
                                 <label class="mb-1 opacity-75 fs-sm text-white">Password</label>
-                                <input autocomplete="off" type="password" name="password" required class="form-control auth bg-soft-dark border-0 text-white fs-sm rounded-1">
+                                <input autocomplete="off" type="password" name="password" required class="form-control dark bg-soft-dark border-0 text-white fs-sm rounded-1">
                                 @error('password')<p class="text-danger fs-sm mb-0">{{$message}}</p>@enderror
                             </div>
                             <div class="mt-5 mb-3 text-center">

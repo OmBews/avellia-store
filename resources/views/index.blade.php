@@ -34,44 +34,19 @@
                 <div class="col-9 col-md-9 col-12">
                     <h4 class="text-white" style="margin-bottom: 80px">Games</h4>
                     <div class="row">
-                        <div class="col-2 mt-3 mb-5 mx-0 px-1">
-                            <div class="card bg-dark shadow h-100 rounded" style="max-width: 100%;cursor:pointer;"
-                                onclick="if (!window.__cfRLUnblockHandlers) return false; window.location='https://takapedia.com/order/top-up-diamond-proses-otomatis'"
+                        @foreach ($games as $data)
+                        <div class="col-lg-2 col-md-3 col-6 mt-3 mb-5 mx-0 px-1 g-5">
+                            <div class="card bg-dark shadow h-100 rounded" style="max-width: 100%; cursor:pointer;"  onclick=" window.location.href='/order/{{$data->slug}}'"
                                 data-cf-modified-acd7c5486872415cda61912a-="">
-                                <img src="https://takapedia.com/assets/img/1673904320diamond fast (3).png"
-                                    class="card-img-top rounded-img-buy size-img-buy position-absolute top-4 start-50 translate-middle"
-                                    alt="top-up-diamond-proses-otomatis-icon">
+                                <img src="{{ asset('storage/photo/'.$data->thumbnail) }}" class="card-img-top rounded-img-buy size-img-buy position-absolute top-4 start-50 translate-middle" alt="top-up-diamond-proses-otomatis-icon">
                                 <div class="card-body text-center mt-5 mb-0 p-1 pt-lg-3">
-                                    <small class="col-hp">Top Up Diamond</small><br>
-                                    <small class="col-hp2 text-muted text-yellow">Proses Otomatis</small>
-                                </div>
-                                <div class="col justify-content-center my-auto d-none">
-                                    <a href="https://takapedia.com/order/top-up-diamond-proses-otomatis"
-                                        class="btn btn-topup float-end rounded-pill m-2 btn-sm">
-                                        Top Up
-                                    </a>
+                                    <h1 class="fs-sm text-white  mt-2">{{ $data->name }}</h1>
+                                    <p class="fs-s-sm text-primary">{{ $data->developer }}</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-2 mt-3 mb-5 mx-0 px-1">
-                            <div class="card bg-dark shadow h-100 rounded" style="max-width: 100%;cursor:pointer;"
-                                onclick="if (!window.__cfRLUnblockHandlers) return false; window.location='https://takapedia.com/order/top-up-diamond-proses-otomatis'"
-                                data-cf-modified-acd7c5486872415cda61912a-="">
-                                <img src="https://takapedia.com/assets/img/1673904320diamond fast (3).png"
-                                    class="card-img-top rounded-img-buy size-img-buy position-absolute top-4 start-50 translate-middle"
-                                    alt="top-up-diamond-proses-otomatis-icon">
-                                <div class="card-body text-center mt-5 mb-0 p-1 pt-lg-3">
-                                    <small class="col-hp">Top Up Diamond</small><br>
-                                    <small class="col-hp2 text-muted text-yellow">Proses Otomatis</small>
-                                </div>
-                                <div class="col justify-content-center my-auto d-none">
-                                    <a href="https://takapedia.com/order/top-up-diamond-proses-otomatis"
-                                        class="btn btn-topup float-end rounded-pill m-2 btn-sm">
-                                        Top Up
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
+
                     </div>
                 </div>
             </div>

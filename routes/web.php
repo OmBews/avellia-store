@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\GameController;
+use App\Http\Controllers\IndexController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,9 +18,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [IndexController::class, 'index']);
+Route::get('/order/{slug}', [IndexController::class, 'index']);
 
 // authentication
 Route::get('/login', [AuthController::class, 'loginView']);
@@ -26,4 +28,7 @@ Route::get('/logout', [AuthController::class, 'logout']);
 
 // admin 
 Route::get('/app', [AdminController::class, 'index']);
+
+Route::resource('/app/admin', UserController::class);
+Route::resource('/app/games', GameController::class);
 
