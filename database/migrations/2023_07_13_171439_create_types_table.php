@@ -11,14 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('nominals', function (Blueprint $table) {
+        Schema::create('types', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->uuid('games_id')->nullable();
-            $table->foreign('games_id')->references('id')->on('games');
-            $table->string('thumbnail')->nullable();
             $table->string('name')->nullable();
-            $table->string('price')->nullable();
-            $table->string('value')->nullable();
             $table->timestamps();
         });
     }
@@ -28,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('nominals');
+        Schema::dropIfExists('types');
     }
 };

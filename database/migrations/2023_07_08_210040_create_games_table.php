@@ -15,7 +15,6 @@ return new class extends Migration
             $table->uuid('id')->primary();
             $table->string('thumbnail')->nullable();
             $table->string('name')->nullable();
-            $table->string('detail_name')->nullable();
             $table->string('developer')->nullable();
             $table->string('short_description')->nullable();
             $table->string('slug')->nullable();

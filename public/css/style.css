@@ -11,16 +11,6 @@ body {
     font-weight: 400;
 }
 
-.nav-hover:hover .dropdown-menu  {
-    display: block !important;
-}
-
-.nav-item a {
-    font-size: 14px;
-    letter-spacing: normal;
-    color: var(--bs-color-white-dark-primary);
-}
-
 .bg-dark {
     background-color: rgba(var(--bs-color-dark-primary),1)!important;
 }
@@ -54,6 +44,10 @@ body {
     width: max-content !important;
 }
 
+.mt-10 {
+    margin-top: 120px;
+}
+
 hr {
     opacity: 15%;
 }
@@ -72,6 +66,16 @@ th, td {
 }
 
 /* navbar  */
+
+.nav-hover:hover .dropdown-menu  {
+    display: block !important;
+}
+
+.nav-item a {
+    font-size: 14px;
+    letter-spacing: normal;
+    color: var(--bs-color-white-dark-primary);
+}
 
 .input-group {
     background: var(--bs-color-primary);
@@ -181,3 +185,37 @@ th, td {
 
 
 /* end banner  */
+
+/* items top up  */
+
+.list-group-items {
+    background: var(--bs-color-soft-dark-primary);
+    padding: .8rem 1rem ;
+    border-radius: 13px;
+    border: 2px var(--bs-color-soft-dark-primary) solid;
+    cursor: pointer;
+}
+
+.list-group-items:hover{
+    background: #adadad43;
+    border-color: #adadad43;
+}
+
+.list-group input[type="radio"]:checked+.list-group-items{
+    border-color: #c9c9c993 ;
+    box-shadow: 0 0 2.22vw #ababab, inset 0 2.741vw 2.05556vw #adadad43, inset 0 -3.74vw 4.448vw #adadad43;
+
+}   
+
+.nominal-name {
+    font-size: 12px;
+    color: #fff;
+}
+
+.nominal-price {
+    font-size: 12px;
+    color: #fff;
+    opacity: 90%;
+}
+
+/* end items top up  */
