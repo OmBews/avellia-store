@@ -31,6 +31,10 @@ body {
     font-size: 13.2px;
 }
 
+.fs-md {
+    font-size: 14px;
+}
+
 .form-control:focus, .form-select:focus, .navbar-toggler:focus, .form-check-input:focus {
     box-shadow: none;
     border-color: #dee2e6;
@@ -188,6 +192,15 @@ th, td {
 
 /* items top up  */
 
+#items-wrapper {
+    padding-top: 120px;
+    padding-bottom: 50px;
+}
+
+.side-content-items p {
+    font-size: 14px;
+}
+
 .list-group-items {
     background: var(--bs-color-soft-dark-primary);
     padding: .8rem 1rem ;
@@ -213,7 +226,7 @@ th, td {
 }
 
 .nominal-price {
-    font-size: 12px;
+    font-size: 11.5px;
     color: #fff;
     opacity: 90%;
 }
