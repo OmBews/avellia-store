@@ -9,7 +9,7 @@
                         <div class="text-center mb-2 d-lg-block d-none">
                             <img src="{{ asset('storage/photo/'.$game->thumbnail) }}" width="160" alt="">
                         </div>
-                        <h2>{{ $game->name }}</h2>
+                        <h2 class="heading-title max-content">{{ $game->name }}</h2>
                         <div class="mt-4">
                             <div class="row ">
                                 <div class="col-1 p-0 d-lg-none d-block me-3 me-md-0">
@@ -86,19 +86,46 @@
                     <div class="card-header">
                         <p class="fs-5 mb-2">Pilih Metode Pembayaran</p>
                     </div>
-                    <div class="card-body mx-2">
-                        <div class="accordion" id="accordionExample">
-                            <div class="accordion-item">
+                    <div class="card-body">
+                        <div class="accordion " id="accordionExample">
+                            <div class="accordion-item rounded-3">
                               <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                  Accordion Item #1
+                                <button class="accordion-button collapsed bg-dark px-3 rounded-0" data-bs-toggle="collapse" data-bs-target="#payment-dana" aria-expanded="false" aria-controls="payment-dana">
+                                  <div class="d-flex justify-content-between w-100">
+                                    <div class="text-white fs-sm">E-Wallet</div>
+                                    <div class="text-white fs-sm">Rp. 132,400</div>
+                                  </div>
                                 </button>
                               </h2>
-                              <div id="collapseOne" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                  <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                              <div id="payment-dana" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
+                                  <div class="accordion-body bg-soft-dark">
+                                      <label for="payment-method-dana" class="d-block w-100 h-100 payment-method mb-2" style="cursor: pointer">
+                                        <input type="radio" name="payment-method" id="payment-method-dana" class="d-none">
+                                        <div class="card bg-white-dark ">
+                                            <div class="card-body">
+                                                <div class="d-flex justify-content-between w-100">
+                                                    <span class="fs-md">DANA</span>
+                                                    <span class="fs-md">Rp. 132,400</span>
+                                                </div>
+                                                <hr class="mx-1">
+                                            </div>
+                                        </div>
+                                      </label>
+                                      <label for="payment-method-gopay" class="d-block w-100 h-100 payment-method mb-2" style="cursor: pointer">
+                                        <input type="radio" name="payment-method" id="payment-method-gopay" class="d-none">
+                                        <div class="card bg-white-dark ">
+                                            <div class="card-body">
+                                                <div class="d-flex justify-content-between w-100">
+                                                    <span class="fs-md">GOPAY</span>
+                                                    <span class="fs-md">Rp. 132,400</span>
+                                                </div>
+                                                <hr class="mx-1">
+                                            </div>
+                                        </div>
+                                      </label>
                                 </div>
-                              </div>
+                            </div>
+
                             </div>
                           </div>
                     </div>
@@ -109,8 +136,8 @@
                         <p class="fs-5 mb-2">Nomor Whatsapp</p>
                     </div>
                     <div class="card-body mx-2">
-                        <p class="mb-1 opacity-75">Nomor ini akan dihubungi jika terjadi masalah</p>
-                        <input type="text" name="" id="" placeholder="Nomor Whatsapp [628xxxx]" class="form-control">
+                        <p class="mb-1 opacity-75"><i>Nomor HP anda</i></p>
+                        <input type="number" name="telp" id="" placeholder="Nomor Whatsapp [628xxxx]" class="form-control">
                     </div>
                 </div>
 

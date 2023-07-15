@@ -19,6 +19,10 @@ body {
     background: var(--bs-color-soft-dark-primary);
 }
 
+.bg-white-dark{
+    background: var(--bs-color-white-dark-primary);
+}
+
 .text-primary {
     color: var(--bs-color-primary) !important;
 }
@@ -35,9 +39,9 @@ body {
     font-size: 14px;
 }
 
-.form-control:focus, .form-select:focus, .navbar-toggler:focus, .form-check-input:focus {
+.form-control:focus, .form-select:focus, .navbar-toggler:focus, .form-check-input:focus, .accordion-button:focus {
     box-shadow: none;
-    border-color: #dee2e6;
+    /* border-color: #dee2e6; */
 }
 
 .form-control.dark:focus {
@@ -46,6 +50,35 @@ body {
 
 .max-content {
     width: max-content !important;
+}
+
+.heading-title {
+    position: relative;
+}
+
+.heading-title::before {
+    content: '';
+    position: absolute;
+    top: 38px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    width: 34%;
+    height: 3px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.heading-title::after {
+    content: '';
+    position: absolute;
+    top: 38px;
+    left: 30%;
+    background: var(--bs-color-primary);
+    width: 10%;
+    height: 3px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .mt-10 {
@@ -201,12 +234,41 @@ th, td {
     font-size: 14px;
 }
 
+.accordion-item {
+    border: 2px var(--bs-color-soft-dark-primary) solid !important;
+}
+
+.accordion-body {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.accordion-button:not(.collapsed)::after {
+    display: none !important;
+}
+
+.accordion-button::after{
+    display: none !important;
+}
+
+.accordion-button:focus {
+    border: 0 !important;
+}
+
+.payment-method input[type="radio"]:checked+.card, .payment-method .card:hover{
+    background: #fff !important;
+}  
+
 .list-group-items {
     background: var(--bs-color-soft-dark-primary);
     padding: .8rem 1rem ;
     border-radius: 13px;
     border: 2px var(--bs-color-soft-dark-primary) solid;
     cursor: pointer;
+}
+
+.accordion-button {
+    box-shadow: none !important;
 }
 
 .list-group-items:hover{
@@ -217,7 +279,6 @@ th, td {
 .list-group input[type="radio"]:checked+.list-group-items{
     border-color: #c9c9c993 ;
     box-shadow: 0 0 2.22vw #ababab, inset 0 2.741vw 2.05556vw #adadad43, inset 0 -3.74vw 4.448vw #adadad43;
-
 }   
 
 .nominal-name {
