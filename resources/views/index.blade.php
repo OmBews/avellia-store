@@ -32,7 +32,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-9 col-md-9 col-12">
-                    <h4 class="text-white heading-title max-content" style="margin-bottom: 80px">Games</h4>
+                    <h4 class="text-white heading-title max-content" style="margin-bottom: 80px">Populer Games</h4>
                     <div class="row">
                         @foreach ($games as $data)
                         <div class="col-lg-2 col-md-3 col-6 mt-3 mb-5 mx-0 px-1 g-5">

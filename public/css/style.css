@@ -155,6 +155,11 @@ th, td {
     display: block; 
 }
 
+.dropdown:hover .bi.bi-chevron-down {
+    transition: 0.2s;
+    transform: rotate(180deg);
+}
+
 /* end navbar  */
 
 
