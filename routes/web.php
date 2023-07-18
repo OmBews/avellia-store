@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [IndexController::class, 'index']);
 Route::get('/order/{slug}', [IndexController::class, 'items']);
+Route::get('/search', [IndexController::class, 'search']);
 
 // authentication
 Route::get('/login', [AuthController::class, 'loginView']);

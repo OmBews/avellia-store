@@ -32,18 +32,19 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-9 col-md-9 col-12">
-                    <h4 class="text-white heading-title max-content" style="margin-bottom: 80px">Populer Games</h4>
-                    <div class="row">
+                    <h4 class="text-white heading-title max-content mb-90">Populer Games</h4>
+                    <div class="row justify-content-lg-start justify-content-center">
                         @foreach ($games as $data)
-                        <div class="col-lg-2 col-md-3 col-6 mt-3 mb-5 mx-0 px-1 g-5">
-                            <div class="card bg-dark shadow h-100 rounded" style="max-width: 100%; cursor:pointer;"  onclick=" window.location.href='/order/{{$data->slug}}'"
-                                data-cf-modified-acd7c5486872415cda61912a-="">
-                                <img src="{{ asset('storage/photo/'.$data->thumbnail) }}" class="card-img-top rounded-img-buy size-img-buy position-absolute top-4 start-50 translate-middle" alt="top-up-diamond-proses-otomatis-icon">
-                                <div class="card-body text-center mt-5 mb-0 p-1 pt-lg-3">
-                                    <h1 class="fs-sm text-white  mt-2">{{ $data->name }}</h1>
-                                    <p class="fs-s-sm text-primary">{{ $data->developer }}</p>
+                        <div class="col-lg-2 col-md-3 col-5 mt-3 mb-5 mx-0 px-1 g-5">
+                            <a href="/order/{{$data->slug}}" class="text-decoration-none w-100 h-100">
+                                <div class="card bg-dark shadow h-100 rounded">
+                                    <img src="{{ asset('storage/photo/'.$data->thumbnail) }}" width="130" class="rounded-img-buy size-img-buy position-absolute top-4 start-50 translate-middle" alt="game-image">
+                                    <div class="card-body text-center mt-5 p-1 pt-lg-3 pt-4">
+                                        <h1 class="fs-sm text-white  mt-2">{{ $data->name }}</h1>
+                                        <p class="fs-s-sm text-primary">{{ $data->developer }}</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         @endforeach
 

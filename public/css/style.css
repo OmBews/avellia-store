@@ -85,6 +85,10 @@ body {
     margin-top: 120px;
 }
 
+.mb-90 {
+    margin-bottom: 90px;
+}
+
 hr {
     opacity: 15%;
 }
@@ -230,7 +234,7 @@ th, td {
 
 /* items top up  */
 
-#items-wrapper {
+.items-wrapper {
     padding-top: 120px;
     padding-bottom: 50px;
 }

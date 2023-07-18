@@ -16,4 +16,15 @@ class IndexController extends Controller
         $game = Game::where('slug', $slug)->first();
         return view('index.items', compact('game'));
     }
+
+    function search() {
+        $games = Game::all();
+        if(isset($_GET['q'])){
+            $games = Game::where('slug', 'like', '%'.$_GET['q'].'%')->orderByDesc('created_at')->get();
+        }
+    
+        // dd($games);
+        
+        return view('index.search', compact('games'));
+    }
 }

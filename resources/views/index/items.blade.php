@@ -1,7 +1,7 @@
 @extends('layout.mainlayout')
 
 @section('content')
-    <div class="container" id="items-wrapper">
+    <div class="container items-wrapper">
         <div class="row">
             <div class="col-lg-4 col-12 side-content-items">
                 <div class="card bg-dark border-0 rounded-1 shadow ">
