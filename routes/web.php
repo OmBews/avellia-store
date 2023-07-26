@@ -23,15 +23,22 @@ Route::get('/', [IndexController::class, 'index']);
 Route::get('/order/{slug}', [IndexController::class, 'items']);
 Route::get('/search', [IndexController::class, 'search']);
 
-// authentication
-Route::get('/login', [AuthController::class, 'loginView']);
-Route::get('/login/store', [AuthController::class, 'login'])->name('login.get');
-Route::get('/logout', [AuthController::class, 'logout']);
 
+Route::middleware(['guest'])->group(function () {
+    
+// authentication
+    Route::get('/login', [AuthController::class, 'loginView']);
+    Route::get('/login/store', [AuthController::class, 'login'])->name('login.get');
+    Route::get('/logout', [AuthController::class, 'logout']);
+});
+
+Route::middleware(['auth'])->group(function () {
+ 
 // admin 
 Route::get('/app', [AdminController::class, 'index']);
 
 Route::resource('/app/admin', UserController::class);
 Route::resource('/app/games', GameController::class);
 Route::resource('/app/nominals', NominalController::class);
+});
 
